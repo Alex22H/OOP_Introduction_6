@@ -10,12 +10,20 @@ namespace OOP_Introduction
             Person Student = new Person
             {
                 firstName = "John",
-                lastName = "Doe"
+                lastName = "Doe",
+                dateOfBirth = new DateTime(1994,11,10)
             };
 
 
             // after fixing access permissions
+            // <class>.<item>
+            // "run firstname method on student object"
             Debug.WriteLine(Student.firstName);
+            Debug.WriteLine(Student.getName());
+            
+            // this works, but not Person.getName() because this is static. static is associated with class types
+            // static keyword makes it unassociated with an object like "student" or "teacher"
+            Debug.WriteLine(Person.getGreeting());
 
             // using the constructor
             Person Teacher = new Person();
